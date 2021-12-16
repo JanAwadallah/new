@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require('cors')
 const imageThumbnail = require("image-thumbnail");
+let port = process.env.PORT || 3000
 
 
 app.use(cors())
@@ -63,4 +64,4 @@ app.post("/upload", upload.array("file"), async (req, res) => {
 
 });
 
-app.listen();
+app.listen(port);
